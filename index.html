@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edison Riella - Soluções Digitais</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #e64a19; /* Laranja do seu logo */
-            --text-color: #333;
+            --text-color: #000; /* Texto em preto puro para máximo contraste */
             --bg-color: #f4f4f9;
         }
 
@@ -19,6 +19,8 @@
             background-color: var(--bg-color);
             margin: 0;
             padding: 0;
+            /* A mágica acontece aqui: define negrito para o corpo todo */
+            font-weight: bold; 
         }
 
         header {
@@ -33,7 +35,7 @@
         }
 
         .logo {
-            max-height: 70px; /* Tamanho do logo no topo */
+            max-height: 70px;
             width: auto;
             margin-right: 15px;
         }
@@ -44,35 +46,31 @@
             background: #fff;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
         h1, h2, h3 {
             font-family: 'Montserrat', sans-serif;
             color: var(--primary-color);
+            font-weight: 800; /* Extra negrito para títulos */
         }
 
         .intro-text {
-            font-size: 1.1em;
+            font-size: 1.15em;
             margin-bottom: 25px;
         }
 
         .links-section {
-            background: #fff8f5;
+            background: #fff1eb;
             padding: 20px;
-            border-left: 5px solid var(--primary-color);
+            border-left: 6px solid var(--primary-color);
             margin: 20px 0;
             border-radius: 8px;
         }
 
         a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
+            color: #0056b3;
+            text-decoration: underline; /* Sublinhado ajuda na visibilidade de links */
         }
 
         .features-list {
@@ -81,8 +79,8 @@
         }
 
         .features-list li {
-            margin-bottom: 12px;
-            padding-left: 30px;
+            margin-bottom: 15px;
+            padding-left: 35px;
             position: relative;
         }
 
@@ -94,27 +92,29 @@
 
         .cta-button {
             display: inline-block;
-            background: #25d366; /* Verde do WhatsApp */
-            color: white;
-            padding: 15px 30px;
+            background: #25d366;
+            color: white !important; /* Força cor branca no texto do botão */
+            padding: 18px 35px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 1.1em;
             margin: 20px 0;
             transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
 
         .cta-button:hover {
             background: #128c7e;
-            color: white;
-            transform: translateY(-2px);
+            transform: scale(1.05);
+            text-decoration: none;
         }
 
         .video-container {
             margin-top: 40px;
             text-align: center;
             padding: 20px;
-            background: #f9f9f9;
+            background: #fdfdfd;
+            border: 2px solid #eee;
             border-radius: 15px;
         }
 
@@ -122,25 +122,24 @@
             width: 100%;
             max-width: 600px;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .profile-info {
-            border-top: 2px solid #f4f4f9;
+            border-top: 3px solid var(--primary-color);
             margin-top: 30px;
             padding-top: 20px;
-            font-size: 0.95em;
+            font-size: 1.05em;
         }
 
         footer {
             text-align: center;
             padding: 30px;
-            font-size: 0.9em;
-            color: #666;
-            font-style: italic;
+            font-size: 1em;
+            color: #000;
         }
 
-        /* Ajustes para celular */
+        /* Ajustes para telas pequenas (Celular) */
         @media (max-width: 600px) {
             .container { margin: 10px; padding: 20px; }
             header { flex-direction: column; text-align: center; }
@@ -153,13 +152,13 @@
 <header>
     <img src="imagens/logodebocaemboca.jpeg" alt="Logo DeBocaEmBoca" class="logo">
     <div>
-        <h2 style="margin:0; font-size: 1.2em;">DeBocaEmBoca</h2>
+        <h2 style="margin:0; font-size: 1.3em;">DeBocaEmBoca</h2>
     </div>
 </header>
 
 <div class="container">
     <div class="intro-text">
-        <p><strong>Olá, tudo bem? 😊</strong></p>
+        <p>Olá, tudo bem? 😊</p>
         <p>Vi seu trabalho e ajudo empreendedores a atrair mais clientes usando Google e WhatsApp, criando sites profissionais ou reformulando os seus, focando em conversão.</p>
         <p>Vou te mostrar um exemplo real de site que desenvolvo ou reformulo:</p>
     </div>
@@ -182,28 +181,28 @@
         <li>Qualifica interessados (leads) e os captura</li>
         <li>Te avisa por e-mail quando entra alguém novo</li>
         <li>Funciona em horário comercial estendido (ex: das 06h às 23h)</li>
-        <li><strong>Instalado em seu computador:</strong> Sem mensalidades de servidor ou nuvem. Custo zero de manutenção.</li>
+        <li>Instalado em seu computador: Sem mensalidades de servidor ou nuvem. Custo zero de manutenção.</li>
     </ul>
 
     <div style="text-align: center; margin-top: 30px;">
-        <p><strong>Você pode ver funcionando agora:</strong></p>
+        <p>Você pode ver funcionando agora:</p>
         <a href="https://wa.me/5512997507961" class="cta-button" target="_blank">Mandar um "Oi" para (12) 99750-7961</a>
     </div>
 
-    <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
+    <hr style="border: 0; border-top: 2px solid #eee; margin: 40px 0;">
 
     <p>Também ofereço serviços de divulgação em redes sociais, e-mail marketing e busca de dados (OSINT) — localização de informações por CPF ou nome em fontes abertas de Cybersecurity.</p>
 
     <div class="profile-info">
         <p>Trabalho sozinho, por isso meus valores são bem acessíveis, e o foco é resultado real, não promessa milagrosa.</p>
-        <p><strong>Sr. Edison Riella</strong><br>
+        <p>Sr. Edison Riella<br>
         49 anos de experiência como Analista de Sistemas e Especialista em IA.<br>
         🌐 <a href="http://vendasmais.com" target="_blank">vendasmais.com</a> | 🔗 <a href="https://lnk.bio/debocaemboca2025" target="_blank">Ver todos os links</a></p>
     </div>
 
     <div class="video-container">
         <h3>Apresentação Solution Informática</h3>
-        <video controls poster="imagens/logodebocaemboca.jpeg">
+        <video controls>
             <source src="imagens/SolutionInformática.mp4" type="video/mp4">
             Seu navegador não suporta a reprodução de vídeo.
         </video>
