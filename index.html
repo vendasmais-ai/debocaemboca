@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #e64a19; /* Laranja do seu logo */
-            --text-color: #000; /* Texto em preto puro para máximo contraste */
+            --primary-color: #e64a19;
+            --text-color: #000;
             --bg-color: #f4f4f9;
         }
 
@@ -19,8 +19,7 @@
             background-color: var(--bg-color);
             margin: 0;
             padding: 0;
-            /* A mágica acontece aqui: define negrito para o corpo todo */
-            font-weight: bold; 
+            font-weight: bold; /* Tudo em negrito como solicitado */
         }
 
         header {
@@ -34,7 +33,7 @@
             z-index: 1000;
         }
 
-        .logo {
+        .logo-topo {
             max-height: 70px;
             width: auto;
             margin-right: 15px;
@@ -49,15 +48,12 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary-color);
-            font-weight: 800; /* Extra negrito para títulos */
-        }
-
-        .intro-text {
-            font-size: 1.15em;
-            margin-bottom: 25px;
+        .imagem-secao {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
         }
 
         .links-section {
@@ -70,7 +66,7 @@
 
         a {
             color: #0056b3;
-            text-decoration: underline; /* Sublinhado ajuda na visibilidade de links */
+            text-decoration: underline;
         }
 
         .features-list {
@@ -93,7 +89,7 @@
         .cta-button {
             display: inline-block;
             background: #25d366;
-            color: white !important; /* Força cor branca no texto do botão */
+            color: white !important;
             padding: 18px 35px;
             border-radius: 50px;
             text-decoration: none;
@@ -103,19 +99,9 @@
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
 
-        .cta-button:hover {
-            background: #128c7e;
-            transform: scale(1.05);
-            text-decoration: none;
-        }
-
         .video-container {
-            margin-top: 40px;
+            margin: 30px auto;
             text-align: center;
-            padding: 20px;
-            background: #fdfdfd;
-            border: 2px solid #eee;
-            border-radius: 15px;
         }
 
         video {
@@ -129,41 +115,33 @@
             border-top: 3px solid var(--primary-color);
             margin-top: 30px;
             padding-top: 20px;
-            font-size: 1.05em;
         }
 
         footer {
             text-align: center;
             padding: 30px;
             font-size: 1em;
-            color: #000;
         }
 
-        /* Ajustes para telas pequenas (Celular) */
         @media (max-width: 600px) {
             .container { margin: 10px; padding: 20px; }
             header { flex-direction: column; text-align: center; }
-            .logo { margin-bottom: 10px; margin-right: 0; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="imagens/logodebocaemboca.jpeg" alt="Logo DeBocaEmBoca" class="logo">
-    <div>
-        <h2 style="margin:0; font-size: 1.3em;">DeBocaEmBoca</h2>
-    </div>
+    <img src="imagens/logodebocaemboca.jpeg" alt="Logo" class="logo-topo">
+    <div><h2 style="margin:0;">DeBocaEmBoca</h2></div>
 </header>
 
 <div class="container">
-    <div class="intro-text">
-        <p>Olá, tudo bem? 😊</p>
-        <p>Vi seu trabalho e ajudo empreendedores a atrair mais clientes usando Google e WhatsApp, criando sites profissionais ou reformulando os seus, focando em conversão.</p>
-        <p>Vou te mostrar um exemplo real de site que desenvolvo ou reformulo:</p>
-    </div>
-
+    <p>Olá, tudo bem? 😊</p>
+    <p>Vi seu trabalho e ajudo empreendedores a atrair mais clientes usando Google e WhatsApp, criando sites profissionais ou reformulando os seus, focando em conversão.</p>
+    
     <div class="links-section">
+        <p>Vou te mostrar um exemplo real de site que desenvolvo ou reformulo:</p>
         <p>👉 <a href="https://ahavahmerlin.github.io/Kuboo/" target="_blank">Projeto Kuboo</a></p>
         <p>👉 <a href="https://ahavahmerlin.github.io/MichellyKuzminskas/" target="_blank">Projeto Michelly Kuzminskas</a></p>
         <p>👉 <a href="https://ahavahmerlin.github.io/consultoria-mais-saude/" target="_blank">Consultoria Mais Saúde</a></p>
@@ -171,7 +149,8 @@
 
     <p>Tenho como hospedar seu site de graça; se tiver um domínio, que custa barato, a credibilidade se torna 100%.</p>
 
-    <h3>🤖 Assistente Virtual para WhatsApp</h3>
+    <img src="imagens/chatbot.jpeg" alt="Assistente Virtual" class="imagem-secao">
+
     <p>Além do site, ofereço um Assistente Virtual que atende seus pacientes automaticamente, como um funcionário digital:</p>
     
     <ul class="features-list">
@@ -184,9 +163,18 @@
         <li>Instalado em seu computador: Sem mensalidades de servidor ou nuvem. Custo zero de manutenção.</li>
     </ul>
 
-    <div style="text-align: center; margin-top: 30px;">
+    <div class="video-container">
+        <video controls>
+            <source src="imagens/essebotsoueu.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+    </div>
+
+    <div style="text-align: center;">
         <p>Você pode ver funcionando agora:</p>
         <a href="https://wa.me/5512997507961" class="cta-button" target="_blank">Mandar um "Oi" para (12) 99750-7961</a>
+        
+        <img src="imagens/12aulas.jpeg" alt="12 Aulas" class="imagem-secao">
     </div>
 
     <hr style="border: 0; border-top: 2px solid #eee; margin: 40px 0;">
@@ -201,10 +189,9 @@
     </div>
 
     <div class="video-container">
-        <h3>Apresentação Solution Informática</h3>
+        <p>Apresentação Solution Informática</p>
         <video controls>
             <source src="imagens/SolutionInformática.mp4" type="video/mp4">
-            Seu navegador não suporta a reprodução de vídeo.
         </video>
     </div>
 </div>
