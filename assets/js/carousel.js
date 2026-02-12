@@ -1,4 +1,3 @@
-const track = document.querySelector('.carousel-track');
 const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
 
@@ -6,7 +5,9 @@ const startImage = 2;
 const endImage = 44;
 let currentIndex = 0;
 
-// 1. Criar as imagens dentro da estrutura correta
+// Limpa o track antes de começar (evita duplicados)
+track.innerHTML = '';
+
 for (let i = startImage; i <= endImage; i++) {
     const li = document.createElement('li');
     const img = document.createElement('img');
@@ -17,38 +18,29 @@ for (let i = startImage; i <= endImage; i++) {
 }
 
 function updateCarousel() {
-    const slideWidth = track.querySelector('li').offsetWidth;
+    const slideWidth = track.parentElement.offsetWidth;
     track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 
-// Botão Próximo
 nextBtn.addEventListener('click', () => {
-    const slides = track.querySelectorAll('li');
-    currentIndex = (currentIndex + 1) % slides.length;
+    const total = endImage - startImage + 1;
+    currentIndex = (currentIndex + 1) % total;
     updateCarousel();
 });
 
-// Botão Anterior
 prevBtn.addEventListener('click', () => {
-    const slides = track.querySelectorAll('li');
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    const total = endImage - startImage + 1;
+    currentIndex = (currentIndex - 1 + total) % total;
     updateCarousel();
 });
 
-// Auto-play (Troca sozinho igual ao exemplo)
-let autoPlay = setInterval(() => {
-    const slides = track.querySelectorAll('li');
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateCarousel();
-}, 4000);
+// Força o ajuste inicial após um pequeno delay para o navegador processar o CSS
+setTimeout(updateCarousel, 500);
 
-// Para o auto-play quando o usuário interage
-const stopAutoPlay = () => clearInterval(autoPlay);
-nextBtn.addEventListener('mousedown', stopAutoPlay);
-prevBtn.addEventListener('mousedown', stopAutoPlay);
-
-// Ajuste de redimensionamento
 window.addEventListener('resize', updateCarousel);
 
-// Inicializa no carregamento
-window.addEventListener('load', updateCarousel);
+setInterval(() => {
+    const total = endImage - startImage + 1;
+    currentIndex = (currentIndex + 1) % total;
+    updateCarousel();
+}, 4000);
