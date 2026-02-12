@@ -3,29 +3,35 @@
   margin-top: 40px;
 }
 
+/* Isso garante que o carrossel não estique a página */
 .carousel-track-container {
-  overflow: hidden;
-  border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    border-radius: 12px;
 }
 
+/* Isso coloca as imagens uma ao lado da outra em uma linha infinita */
 .carousel-track {
-    display: flex; /* Alinha as imagens em linha horizontal */
-    transition: transform 0.5s ease-in-out; /* Suaviza a transição */
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Suaviza a troca */
     margin: 0;
     padding: 0;
     list-style: none;
+    width: 100%;
 }
 
+/* Garante que cada slide tenha exatamente o tamanho do contêiner */
 .carousel-track li {
-  min-width: 100%;
+    min-width: 100%;
+    flex: 0 0 100%;
 }
 
 .carousel-track img {
-  width: 100%;
-  height: 280px;
-  object-fit: contain; /* NÃO CORTA */
-  background: #f8fafc; /* fundo neutro */
-  border-radius: 10px;
+    width: 100%;
+    height: 350px; /* Você pode ajustar a altura aqui */
+    object-fit: contain; /* Não distorce a imagem */
+    background: #f8fafc;
 }
 
 
