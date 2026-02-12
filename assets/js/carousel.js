@@ -2,40 +2,51 @@ const track = document.querySelector('.carousel-track');
 const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
 
-const totalImages = 22;
+// Ajuste aqui: se suas fotos começam no 2 e vão até 44
+const startImage = 2;
+const endImage = 44;
 let currentIndex = 0;
 
-// Criar imagens automaticamente
-for (let i = 1; i <= totalImages; i++) {
-  const li = document.createElement('li');
-  const img = document.createElement('img');
-  img.src = `certificados/${i}.png`;
-  img.alt = `Certificados ${i}`;
-  li.appendChild(img);
-  track.appendChild(li);
+// 1. Criar imagens dinamicamente
+for (let i = startImage; i <= endImage; i++) {
+    const li = document.createElement('li');
+    li.style.minWidth = '100%'; // Garante que cada item ocupe todo o espaço
+    const img = document.createElement('img');
+    img.src = `certiicdaos/${i}.png`; // Note que sua pasta está escrita "certiicdaos"
+    img.alt = `Certificado ${i}`;
+    li.appendChild(img);
+    track.appendChild(li);
 }
 
-const slides = Array.from(track.children);
-
+// 2. Função para mover o carrossel
 function updateCarousel() {
-  const slideWidth = slides[0].getBoundingClientRect().width;
-  track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    const slideWidth = track.parentElement.offsetWidth; // Pega a largura do container pai
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 
+// 3. Botões
 nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateCarousel();
+    const slides = track.querySelectorAll('li');
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
 });
 
 prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateCarousel();
+    const slides = track.querySelectorAll('li');
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
 });
 
-// Auto play
+// 4. Auto play e Redimensionamento
 setInterval(() => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateCarousel();
+    const slides = track.querySelectorAll('li');
+    if(slides.length > 0) {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    }
 }, 5000);
 
+// Garante que ao girar o celular ou dar zoom, ele se ajuste
 window.addEventListener('resize', updateCarousel);
+// Executa uma vez ao carregar para alinhar
+window.onload = updateCarousel;
