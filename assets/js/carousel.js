@@ -12,8 +12,8 @@ for (let i = startImage; i <= endImage; i++) {
     const li = document.createElement('li');
     li.style.minWidth = '100%'; // Garante que cada item ocupe todo o espaço
     const img = document.createElement('img');
-    img.src = `certiicdaos/${i}.png`; // Note que sua pasta está escrita "certiicdaos"
-    img.alt = `Certificado ${i}`;
+    img.src = `certificados/${i}.png`; // Note que sua pasta está escrita "certiicdaos"
+    img.alt = `Certificados ${i}`;
     li.appendChild(img);
     track.appendChild(li);
 }
