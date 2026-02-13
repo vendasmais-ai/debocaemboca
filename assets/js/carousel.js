@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const dotsContainer = document.querySelector('.cert-dots');
     
     let currentIndex = 0;
-    const totalSlides = 43; // 2.png até 44.png
+    const totalSlides = 44; // 2.png até 44.png
     
     // CRIAR SLIDES
-    for(let i = 2; i <= 44; i++) {
+    for(let i = 1; i <= 44; i++) {
         const slide = document.createElement('div');
         slide.className = 'cert-slide';
         const img = document.createElement('img');
