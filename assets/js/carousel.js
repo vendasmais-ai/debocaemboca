@@ -13,6 +13,7 @@ for (let i = startImage; i <= endImage; i++) {
     const img = document.createElement('img');
     img.src = `certificados/${i}.png`;
    img.alt = `Certificados de Qualificação Profissional- Edison Riella ${i} - DeBocaEmBoca`;
+    img.onload = () => console.log(`Carregou ${i}.png`); // Debug
    li.appendChild(img);
     track.appendChild(li);
 }
