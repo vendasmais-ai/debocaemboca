@@ -1,48 +1,62 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const track = document.querySelector('.carousel-track');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-    const container = document.querySelector('.carousel-track-container');
+    const slidesContainer = document.querySelector('.cert-slides');
+    const prevBtn = document.querySelector('.cert-prev');
+    const nextBtn = document.querySelector('.cert-next');
+    const dotsContainer = document.querySelector('.cert-dots');
     
     let currentIndex = 0;
-    let slideWidth = 0;
+    const totalSlides = 43; // 2.png até 44.png
     
-    // CRIAR IMAGENS 2.png até 44.png
+    // CRIAR SLIDES
     for(let i = 2; i <= 44; i++) {
-        const li = document.createElement('li');
+        const slide = document.createElement('div');
+        slide.className = 'cert-slide';
         const img = document.createElement('img');
         img.src = `certificados/${i}.png`;
    img.alt = `Certificados de Qualificação Profissional- Edison Riella ${i} - DeBocaEmBoca`;
-         li.appendChild(img);
-        track.appendChild(li);
+        slide.appendChild(img);
+        slidesContainer.appendChild(slide);
     }
     
-    function init() {
-        slideWidth = container.offsetWidth;
-        updateCarousel();
+    // CRIAR DOTS
+    for(let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'cert-dot';
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
     }
+    
+    const dots = document.querySelectorAll('.cert-dot');
     
     function updateCarousel() {
-        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
     }
     
-    // BOTÕES
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % (track.children.length);
+    function goToSlide(index) {
+        currentIndex = index;
         updateCarousel();
-    });
+    }
     
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + track.children.length) % (track.children.length);
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
         updateCarousel();
-    });
+    }
     
-    // AUTO AVANÇAR - AGORA 8 SEGUNDOS (8000 ms)
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % (track.children.length);
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         updateCarousel();
-    }, 16000); // ← MUDOU DE 4000 PARA 8000 (8 SEGUNDOS)
+    }
+    
+    // EVENTOS
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+    
+    // AUTO - 10 SEGUNDOS
+    setInterval(nextSlide, 10000);
     
     // INICIAR
-    window.addEventListener('load', init);
+    updateCarousel();
 });
