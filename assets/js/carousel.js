@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCarousel();
     });
     
-    // AUTO AVANÇAR
+    // AUTO AVANÇAR - AGORA 8 SEGUNDOS (8000 ms)
     setInterval(() => {
         currentIndex = (currentIndex + 1) % (track.children.length);
         updateCarousel();
-    }, 4000);
+    }, 8000); // ← MUDOU DE 4000 PARA 8000 (8 SEGUNDOS)
     
     // INICIAR
     window.addEventListener('load', init);
