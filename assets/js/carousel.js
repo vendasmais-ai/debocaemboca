@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         slide.className = 'cert-slide';
         const img = document.createElement('img');
         img.src = `certificados/${i}.png`;
-   img.alt = `Certificados de Qualificação Profissional- Edison Riella ${i} - DeBocaEmBoca`;
+   img.alt = `Certificados de Qualificação Profissional ${i} - DeBocaEmBoca`;
         slide.appendChild(img);
         slidesContainer.appendChild(slide);
     }
