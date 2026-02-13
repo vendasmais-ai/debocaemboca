@@ -5,228 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edison Riella - Soluções Digitais</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #e64a19;
-            --text-color: #000;
-            --bg-color: #f4f4f9;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-            font-weight: bold; /* Tudo em negrito como solicitado */
-        }
-
-        header {
-            background: #fff;
-            padding: 15px 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo-topo {
-            max-height: 70px;
-            width: auto;
-            margin-right: 15px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .imagem-secao {
-            width: 100%;
-            max-width: 600px;
-            display: block;
-            margin: 20px auto;
-            border-radius: 10px;
-        }
-
-        .links-section {
-            background: #fff1eb;
-            padding: 20px;
-            border-left: 6px solid var(--primary-color);
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-
-        a {
-            color: #0056b3;
-            text-decoration: underline;
-        }
-
-        .features-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .features-list li {
-            margin-bottom: 15px;
-            padding-left: 35px;
-            position: relative;
-        }
-
-        .features-list li::before {
-            content: '✅';
-            position: absolute;
-            left: 0;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #25d366;
-            color: white !important;
-            padding: 18px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.1em;
-            margin: 20px 0;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-        }
-
-        .video-container {
-            margin: 30px auto;
-            text-align: center;
-        }
-
-        video {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .profile-info {
-            border-top: 3px solid var(--primary-color);
-            margin-top: 30px;
-            padding-top: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            font-size: 1em;
-        }
-
-        @media (max-width: 600px) {
-            .container { margin: 10px; padding: 20px; }
-            header { flex-direction: column; text-align: center; }
-        }
-    </style>
-      <!-- <link rel="stylesheet" href="assets/css/responsive.css" /> -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
 <header>
-    <img src="imagens/logodebocaemboca.jpeg" alt="Logo" class="logo-topo">
-    <div><h2 style="margin:0;">DeBocaEmBoca</h2></div>
+    <img src="imagens/logodebocaemboca.jpeg" alt="Logo" style="max-height:70px;">
+    <h2 style="margin:0;">DeBocaEmBoca</h2>
 </header>
 
 <div class="container">
     <p>Olá, tudo bem? 😊</p>
-    <p>Ajudo empreendedores a atrair mais clientes usando Google e WhatsApp, criando sites profissionais ou reformulando, focando em conversão.</p>
+    <p>Ajudo empreendedores a atrair mais clientes usando Google e WhatsApp.</p>
     
-    <div class="links-section">
-        <p>Vou lhe mostrar exemplos reais que desenvolvi ou reformulei:</p>
+    <div style="background:#fff1eb;padding:20px;border-left:6px solid #e64a19;margin:20px 0;border-radius:8px;">
         <p>👉 <a href="https://ahavahmerlin.github.io/Kuboo/" target="_blank">Kuboo</a></p>
         <p>👉 <a href="https://ahavahmerlin.github.io/MichellyKuzminskas/" target="_blank">Michelly Kuzminskas</a></p>
         <p>👉 <a href="https://ahavahmerlin.github.io/consultoria-mais-saude/" target="_blank">Consultoria Mais Saúde</a></p>
     </div>
 
-    <p>Existe a possibilidade de hospedar seu site de graça; se tiver um domínio, que custa barato, a credibilidade se torna 100%.</p>
+    <img src="imagens/chatbot.jpeg" alt="Chatbot" style="width:100%;max-width:600px;display:block;margin:20px auto;border-radius:10px;">
 
-    <img src="imagens/chatbot.jpeg" alt="Assistente Virtual" class="imagem-secao">
-
-    <p>Além desse site, ofereço Assistente Virtual que atende seus pacientes automaticamente, como um funcionário digital:</p>
-    
-    <ul class="features-list">
-        <li>Responde automaticamente quem manda "oi, olá, bom dia, boa tarde ou boa noite"</li>
-        <li>Organiza fila de atendimento</li>
-        <li>Apresenta seus serviços e produtos</li>
-        <li>Qualifica interessados (leads) e os captura</li>
-        <li>Te avisa por e-mail quando entra alguém novo</li>
-        <li>Funciona em horário comercial estendido (ex: das 06h às 23h)</li>
-        <li>Instalado em seu computador atrelado a seu WhatsApp Bussines. Custo zero de hospedagem</li>
+    <p>Assistente Virtual 24h que atende seus clientes automaticamente:</p>
+    <ul style="list-style:none;padding:0;">
+        <li style="margin:10px 0;padding-left:35px;position:relative;">✅ Responde "oi, olá, bom dia"</li>
+        <li style="margin:10px 0;padding-left:35px;position:relative;">✅ Organiza fila de atendimento</li>
+        <li style="margin:10px 0;padding-left:35px;position:relative;">✅ Apresenta serviços e produtos</li>
+        <li style="margin:10px 0;padding-left:35px;position:relative;">✅ Captura leads qualificados</li>
+        <li style="margin:10px 0;padding-left:35px;position:relative;">✅ Envia e-mail quando entra cliente</li>
     </ul>
 
-    <div class="video-container">
-        <video controls>
-            <source src="imagens/essebotsoueu.mp4" type="video/mp4">
-        </video>
+    <video controls style="width:100%;max-width:600px;display:block;margin:30px auto;border-radius:10px;">
+        <source src="imagens/essebotsoueu.mp4" type="video/mp4">
+    </video>
+
+    <div style="text-align:center;">
+        <a href="https://wa.me/5512997507961" style="display:inline-block;background:#25d366;color:white!important;padding:18px 35px;border-radius:50px;text-decoration:none;font-size:1.1em;margin:20px 0;">Testar Agora (12)99750-7961</a>
     </div>
 
-    <div style="text-align: center;">
-        <p>Você pode ver funcionando agora:</p>
-        <a href="https://wa.me/5512997507961" class="cta-button" target="_blank">Mandar um "Oi" para (12) 99750-7961</a>
+    <!-- CARROSSEL DE CERTIFICADOS -->
+    <div style="text-align:center;margin:40px 0;">
+        <h3>🔒 MINHA TRAJETÓRIA - 40+ CERTIFICAÇÕES</h3>
+        <p>Segurança garantida para seu projeto digital</p>
         
-        <img src="imagens/12aulas.jpeg" alt="12 Aulas" class="imagem-secao">
+        <div class="carousel">
+            <button class="carousel-btn prev">◀</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track"></ul>
+            </div>
+            <button class="carousel-btn next">▶</button>
+        </div>
     </div>
 
-    <hr style="border: 0; border-top: 2px solid #eee; margin: 40px 0;">
-
-    <p>Ofereço serviços de divulgação em redes sociais, e-mail marketing</p>
-    
-    <p>Ofereço serviços de busca de dados (OSINT) — localização de informações por CPF ou nome em fontes abertas, serviço Cybersecurity</p>
-    
-    <div class="profile-info">
-        <p>Trabalho sozinho, por isso meus valores são bem acessíveis, e o foco é resultado real, não promessa milagrosa.</p>
-        <p>Sr. Edison Riella<br>
-        49 anos de experiência como Analista de Sistemas e Especialista em IA.<br>
-             <p>Se gostar conversamos sem compromisso 😊</p>
-        🌐 <a href="http://vendasmais.com" target="_blank">vendasmais.com</a> | 🔗 <a href="https://lnk.bio/debocaemboca2025" target="_blank">Meus Links</a></p>
-    </div>
-
-    <!-- CARROSSEL -->
-    <div style="text-align: center; margin-bottom: 15px;">
-    <h3>Minha Trajetória em Certificações</h3>
-    <p>Mais de 40 especializações garantindo a segurança do seu projeto.</p>
-</div>
-<section class="section bg-light">
-  <div class="container">
-    <h2>Meu Portfólio</h2>
-
-    <div class="carousel">
-      <button class="carousel-btn prev">&#10094;</button>
-
-      <div class="carousel-track-container">
-        <ul class="carousel-track">
-          <!-- JS vai inserir as imagens aqui -->
-        </ul>
-      </div>
-
-      <button class="carousel-btn next">&#10095;</button>
-    </div>
-  </div>
-</section>
-
-
-    <div class="video-container">
-        <p>Apresentação segmento do DeBocaEmBoca - Solution Informática</p>
-        <video controls>
-            <source src="imagens/SolutionInformática.mp4" type="video/mp4">
-        </video>
-    </div>
+    <video controls style="width:100%;max-width:600px;display:block;margin:30px auto;border-radius:10px;">
+        <source src="imagens/SolutionInformática.mp4" type="video/mp4">
+    </video>
 </div>
 
-<footer>
+<footer style="text-align:center;padding:30px;background:#f4f4f9;">
     <p>"Se o Seu Negócio não está na Internet, então Seu Negócio está Fora de Negócio."</p>
+    <p>Edison Riella - Soluções Digitais | <a href="http://vendasmais.com">vendasmais.com</a></p>
 </footer>
-    <script src="assets/js/carousel.js"></script>
 
+<script src="assets/js/carousel.js"></script>
 </body>
 </html>
