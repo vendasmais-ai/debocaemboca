@@ -33,7 +33,7 @@ header h2 { margin-left: 15px; }
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     margin: 30px auto;
     overflow: hidden;
     border-radius: 15px;
@@ -98,8 +98,8 @@ header h2 { margin-left: 15px; }
 /* CARROSSEL IGUAL CONSULTORIA-MAISAUDE */
 .cert-carousel {
     position: relative;
-    max-width: 800px;
-    height: 600px;
+    max-width: 600px;
+    height: 300px;
     margin: 40px auto;
     background: #fff;
     border-radius: 20px;
