@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Solicitacao de Anuncio e ou Aplicativo Mobile, Captacao e ou Indicacao</title>
+        <!--  <meta charset="UTF-8"> -->
+	<!-- Scripts -->
+    <script language='JavaScript'>
+        // Bloqueador de Selecao - iceBreaker http://www.icebreaker.com.br/
+        function bloquear(e) {
+            return false
+        }
+
+        function desbloquear() {
+            return true
+        }
+        document.onselectstart = new Function("return false")
+        if (window.sidebar) {
+            document.onmousedown = bloquear
+            document.onclick = desbloquear
+        }
+    </script>
+    <script language='JavaScript'>
+        // Bloqueador de Botão Direito - iceBreaker http://www.icebreaker.com.br/
+        function clique() {
+            if (event.button == 2 || event.button == 3) {
+                oncontextmenu = 'return false'
+            };
+        }
+        document.onmousedown = clique
+        document.oncontextmenu = new Function("return false;")
+    </script>
+    <script language='JavaScript'>
+        // Bloqueador de Tecla CTRL - iceBreaker http://www.icebreaker.com.br/
+        function checartecla(evt) {
+            if (evt.keyCode == '17') {
+                alert("Comando Desativado")
+                return false
+            }
+            return true
+        }
+    </script>  
+</head>
+<body onselectstart='return false' oncontextmenu='return false' ondragstart='return false' onkeydown='return checartecla(event)'>
+
+    <p align="center"><a title="contador de visitas" href="https://www.webcontadores.com"><img class="aligncenter" title="contador de visitas" src="https://counter11.optistats.ovh/private/webcontadores.php?c=3ajjk4lb4b6fxqazqfah34p5m6p95jfx" alt="contador de visitas" border="0" /></a></p>
+
+	 <center>
+    <img src="https://vendasmais-ai.github.io/ahavahMerlin.github.io//imagens/baixo.gif" alt="Decorativo">
+  </center>
+    
+    
+    <h2>Formulario de Solicitacao de Anuncio e ou Aplicativo Mobile, Captacao e ou Indicacao</h2>
+    <p>Preencha o formulario abaixo para:</p>
+    <ul>
+        <li>Solicitar Insercao de Anuncio</li>
+        <li>Solicitar Aplicativo Mobile</li>
+        <li>Captacao de Anunciante ou Aplicativo Mobile</li>
+        <li>Indicacao para Anunciante</li>
+    </ul>
+
+    <form action="https://formsubmit.co/vendamais@gmail.com" method="POST" enctype="multipart/form-data">
+
+        <!-- Dados do Solicitante -->
+        <fieldset>
+            <legend>Dados do Solicitante</legend>
+            
+            <label for="solicitante_anuncio">Voce e Solicitante de Anuncio Sim ou Nao:</label><br>
+            <input type="text" id="solicitante_anuncio" name="solicitante_anuncio" required aria-required="true" placeholder="Sim ou Nao"><br><br>
+            
+            <label for="solicitante_aplicativo">Voce e Solicitante de Aplicativo Sim ou Nao:</label><br>
+            <input type="text" id="solicitante_aplicativo" name="solicitante_aplicativo" required aria-required="true" placeholder="Sim ou Nao"><br><br>
+
+            <label for="nome_negocio">Nome do Negocio do Solicitante (Empresa):</label><br>
+            <input type="text" id="nome_negocio" name="nome_negocio" required aria-required="true" placeholder="Nome da Empresa"><br><br>
+
+            <label for="cpf_cnpj">CPF / CNPJ Solicitante:</label><br>
+            <input type="text" id="cpf_cnpj" name="cpf_cnpj" required aria-required="true" placeholder="CPF ou CNPJ"><br><br>
+
+            <label for="logo">Imagem Logo do Solicitante:</label><br>
+            <input type="file" id="logo" name="logo" accept="image/*"><br><br>
+
+            <label for="url_negocio">URL (Site, Facebook, Instagram, Blog ...) do Negocio do Solicitante:</label><br>
+            <input type="url" id="url_negocio" name="url_negocio" placeholder="URL do Site/Facebook/Instagram"><br><br>
+        </fieldset>
+
+        <!-- Endereço -->
+        <fieldset>
+            <legend>Endereco</legend>
+
+            <label for="endereco">Endereco e Numero:</label><br>
+            <input type="text" id="endereco" name="endereco" required aria-required="true" placeholder="Rua, Avenida e Numero"><br>
+
+            <label for="bairro">Bairro:</label><br>
+            <input type="text" id="bairro" name="bairro" required aria-required="true" placeholder="Nome do Bairro"><br>
+
+            <label for="cep">CEP:</label><br>
+            <input type="text" id="cep" name="cep" required aria-required="true" placeholder="Codigo Postal"><br>
+
+            <label for="cidade">Cidade:</label><br>
+            <input type="text" id="cidade" name="cidade" required aria-required="true" placeholder="Nome da Cidade"><br>
+
+            <label for="estado">Estado:</label><br>
+            <select id="estado" name="estado" required aria-required="true">
+                <option value="">Selecione o Estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapa</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceara</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espirito Santo</option>
+                <option value="GO">Goias</option>
+                <option value="MA">Maranhao</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Para</option>
+                <option value="PB">Paraiba</option>
+                <option value="PR">Parana</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piaui</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondonia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">Sao Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select><br><br>
+        </fieldset>
+
+        <!-- Telefones -->
+        <fieldset>
+            <legend>Telefones</legend>
+
+            <label for="tel_fixo">Tel Fixo ou Outro Celular:</label><br>
+            <input type="tel" id="tel_fixo" name="tel_fixo" placeholder="Telefone Fixo ou Celular"><br>
+
+            <label for="celular">Celular/Whats:</label><br>
+            <input type="tel" id="celular" name="celular" required aria-required="true" placeholder="Numero do Celular com WhatsApp"><br>
+
+        </fieldset>
+
+        <!-- Outras Informações -->
+        <fieldset>
+            <legend>Outras Informacoes</legend>
+
+            <label for="horarios">Horarios de Funcionamento e Dias:</label><br>
+            <textarea id="horarios" name="horarios" rows="4" cols="50" placeholder="Horario de Atendimento"></textarea><br><br>
+
+             <label for="email_solicitante">E-mail Valido do Solicitante:</label><br>
+            <input type="email" id="email_solicitante" name="email_solicitante" required aria-required="true" placeholder="E-mail Principal"><br><br>
+
+            <label for="comissao">Percentual Comissao Anunciante:</label><br>
+            <input type="number" id="comissao" name="comissao" min="0" max="100" placeholder="Porcentagem de Comissao"><br><br>
+
+            <label for="imagem_banner">Outra imagem do Solicitante (Cartao ou Banner):</label><br>
+            <input type="file" id="imagem_banner" name="imagem_banner" accept="image/*"><br><br>
+
+            <label for="texto_anuncio">Texto do Anuncio:</label><br>
+            <textarea id="texto_anuncio" name="texto_anuncio" rows="4" cols="50" placeholder="Descricao do Anuncio"></textarea><br><br>
+
+            <label for="atividade_app">Qual a atividade para desenvolver o Aplicativo Mobile:</label><br>
+            <textarea id="atividade_app" name="atividade_app" rows="4" cols="50" placeholder="Descreva a Funcionalidade do App"></textarea><br><br>
+        </fieldset>
+
+        <!-- Dados do Captador/Indicador -->
+        <fieldset>
+            <legend>Dados do Captador/Indicador</legend>
+
+            <label for="nome_captador">Nome Captador/Indicador:</label><br>
+            <input type="text" id="nome_captador" name="nome_captador" placeholder="Nome do Captador/Indicador"><br><br>
+
+            <label for="email_captador">E-mail Captador/Indicador:</label><br>
+            <input type="email" id="email_captador" name="email_captador" placeholder="E-mail do Captador/Indicador"><br><br>
+
+             <label for="nome_indicado">Nome do Indicado:</label><br>
+            <input type="text" id="nome_indicado" name="nome_indicado" placeholder="Nome do Indicado"><br><br>
+
+            <label for="email_indicado">E-mail do Indicado:</label><br>
+            <input type="email" id="email_indicado" name="email_indicado" placeholder="E-mail do Indicado"><br><br>
+
+             <label for="celular_indicado">Celular/Whats/Indicado:</label><br>
+            <input type="tel" id="celular_indicado" name="celular_indicado" placeholder="Numero do Celular com WhatsApp do Indicado"><br><br>
+
+        </fieldset>
+
+
+        <!-- Campos ocultos para FormSubmit -->
+        <input type="hidden" name="_next" value="https://sites.google.com/view/rendaextradebocaemboca">  <!-- URL de redirecionamento apos o envio -->
+        <input type="hidden" name="_subject" value="Nova Solicitacao de Anuncio e ou Aplicativo Mobile, Captacao e ou Indicacao"> <!-- Assunto do e-mail -->
+        <input type="hidden" name="_captcha" value="false"> <!-- Desativa o captcha -->
+
+        <button type="submit">Enviar Solicitacao</button>
+    </form>
+
+</body>
+
+</html>
+
+
+
+
+
+
