@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <title>DeBocaEmBoca Soluções Digitais</title>
+	<meta name="description" content="DeBocaEmBoca Soluções Digitais">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edison Riella - Soluções Digitais</title>
+	<link rel="shortcut icon" href="http://vendasmais.com/debocaemboca/favicondebocaemboca.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+	
+	<style>
+    body {
+      font-family: Tahoma, sans-serif;
+      font-size: 12px;
+    }
+
+    .required {
+      color: red;
+    }
+
+    #formulario-container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #formulario-container label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    #formulario-container input[type="text"],
+    #formulario-container input[type="email"],
+    #formulario-container input[type="tel"],
+    #formulario-container textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    #formulario-container input[type="file"] {
+      margin: 5px 0 10px;
+    }
+
+    #formulario-container button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #formulario-container button:hover {
+      background-color: #45a049;
+    }
+  </style>
+
+  <script>
+    document.onselectstart = () => false;
+    document.oncontextmenu = () => false;
+    document.onkeydown = (evt) => {
+      if (evt.keyCode === 17) {
+        alert("Comando Desativado");
+        return false;
+      }
+    };
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130663213-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-130663213-1');
+  </script>
 </head>
 <body>
 <header>
@@ -328,5 +403,63 @@
 </footer>
 
 <script src="assets/js/carousel.js"></script>
+
+<!-- JivoSite Chat -->
+<script type="text/javascript">
+  (function() {
+    var widget_id = 'QnpUrEpKZZ';
+    var d = document;
+    var w = window;
+    function l() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//code.jivosite.com/script/widget/' + widget_id;
+      var ss = document.getElementsByTagName('script')[0];
+      ss.parentNode.insertBefore(s, ss);
+    }
+    if (d.readyState === 'complete') {
+      l();
+    } else {
+      if (w.attachEvent) {
+        w.attachEvent('onload', l);
+      } else {
+        w.addEventListener('load', l, false);
+      }
+    }
+  })();
+</script>
+
+<!-- WhatsHelp Widget -->
+<script type="text/javascript">
+  (function() {
+    var options = {
+      facebook: "366460106756412",
+      whatsapp: "+55(12)981779669",
+      telegram: "A12ECRSBRAZIL",
+      email: "vendamais@gmail.com",
+      sms: "+55(12)981779669",
+      company_logo_url: "//vendasmais.com/debocaemboca.jpg",
+      greeting_message: "Olá, como podemos ajudá-lo(a)? Envie-nos uma mensagem agora, para obter ajuda.",
+      call_to_action: "Envie sua mensagem",
+      button_color: "#E74339",
+      position: "right",
+      order: "whatsapp,telegram,sms,email,facebook",
+    };
+    var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url + '/widget-send-button/js/init.js';
+    s.onload = function() {
+      WhWidgetSendButton.init(host, proto, options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  })();
+</script>
+
+<!-- AddThis Social Tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b5f10b41d437251"></script>
 </body>
 </html>
